@@ -1,0 +1,299 @@
+:root {
+  --primery: rgb(139, 2, 128);
+  --coffe: rgb(103, 10, 98);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+/*ini untuk mengatur warna bg*/
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--coffe);
+  color: #fff;
+  min-height: 2000px;
+}
+
+/*ini untuk mengatur navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(134, 1, 112, 0.8);
+  border-bottom: 1px solid var(--coffe);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: rgb(76, 8, 73);
+}
+
+.navbar .navbar-menu a {
+  color: #fff;
+  display: inline-block;
+  font-size: 0.9rem;
+  margin: 0 1rem;
+}
+
+/*ini untuk mengatur supaya warna tulisan berubah jadi coklat*/
+.navbar .navbar-menu a:hover {
+  color: rgb(83, 9, 79);
+}
+
+.navbar .navbar-menu a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0 2rem;
+  border-bottom: 0.1rem solid rgb(83, 9, 79);
+  transform: scaLeX(0);
+  transition: 0.2s Linear;
+}
+
+.navbar navbar-menu a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-icon a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-icon a:hover {
+  color: rgb(83, 9, 79);
+}
+
+/*hero section*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/bg-kopi.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/*ini untuk mengatur supaya background efek degradasi*/
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(77, 1, 73, 1) 5%,
+    rgba(248, 145, 243, 0) 55%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: var(--coffe);
+}
+
+.hero .content a {
+  display: inline-block;
+  margin-right: 0.7rem;
+  margin-top: 1rem;
+  padding: 0.7rem 2rem;
+  color: #fff;
+  font-size: 1rem;
+  background-color: var(--coffe);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content a:hover {
+  background-color: #4a3310;
+}
+
+/*About Section*/
+.about,
+.produk {
+  padding: 7rem 7% 1.4rem;
+}
+
+.about h2,
+.produk h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.produk h2 span {
+  color: var(--kopi);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 35rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1.5rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.5rem;
+  padding-bottom: 0.8rem;
+}
+
+.about .row .content h3 span {
+  font-style: italic;
+}
+
+.about .row .content h3 span span {
+  color: var(--kopi);
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/*produk section*/
+.produk .fnd::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1rem solid var(--kopi);
+  transform: scaleX(0.08);
+}
+
+.produk .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.produk .row .produk-card {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.produk .row .produk-card img {
+  border-radius: 50%;
+  width: 60%;
+}
+
+.produk .row .produk-card h3 {
+  margin: 1rem auto 0.5rem;
+}
+
+.produk .row .produk-card p {
+  font-weight: 300;
+}
+
+/* footer section */
+
+footer {
+  margin-top: 5rem;
+  padding: 1.5rem;
+  background-color: var(--kopi);
+}
+
+footer h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer .row {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+footer .row .maps {
+  flex: 1 1 30rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+footer .row .content {
+  margin-left: 3rem;
+  flex: 1 1 70rem;
+  align-items: center;
+}
+
+footer .row .content .social a {
+  display: block;
+  color: #fff;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+footer .row .content .social a:hover,
+footer .row .content .links a:hover {
+  color: #000;
+}
+
+footer .row .content .credit {
+  margin-bottom: 1rem;
+}
+
+footer .row .content .credit a {
+  color: #4d2f13;
+  font-weight: 700;
+}
+
+footer .row .content .links a {
+  color: #fff;
+  display: inline-block;
+  margin-right: 3rem;
+  font-weight: 500;
+}
+
+footer .row .content::after {
+  content: --;
+  display: inline-block;
+  padding-left: 0.2rem;
+  border-left: 0.15rem solid #fff;
+  position: fixed;
+}
